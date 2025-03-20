@@ -1,7 +1,7 @@
 # BiteBook
 
 ### MVP Components (Minimum Viable Product)
-- App → Root component managing routes and global state
+- App → Root component managing routes and global state :heavy_check_mark:
 - HeaderPage → Navigation bar with logo, search, and links :heavy_check_mark:
 - FooterPage → Footer with information and social media :heavy_check_mark:
 - RecipeItem → Individual card for each recipe :heavy_check_mark:
