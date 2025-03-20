@@ -2,14 +2,14 @@
 
 ### MVP Components (Minimum Viable Product)
 - App → Root component managing routes and global state
-- HeaderPage → Navigation bar with logo, search, and links
-- FooterPage → Footer with information and social media
-- RecipeCard → Individual card for each recipe
+- HeaderPage → Navigation bar with logo, search, and links :heavy_check_mark:
+- FooterPage → Footer with information and social media :heavy_check_mark:
+- RecipeItem → Individual card for each recipe :heavy_check_mark:
 - RecipeDetail → Page displaying detailed information about a recipe
-- RecipeList → Displays a list of recipes on the main page
+- RecipeList → Displays a list of recipes on the main page :heavy_check_mark:
 - SearchBar → Search bar for finding recipes
 - CategoryFilter → Filter by categories (e.g., pasta, desserts, meats)
-- FavoriteButton → Button to favorite recipes
+- FavoriteButton → Button to favorite recipes 
 - RecipeImageUpload → Allows users to upload an image for their recipe
 
 
