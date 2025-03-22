@@ -70,7 +70,8 @@ ul {
 }
 
 .sidebar {
-  display: none;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -81,8 +82,11 @@ h1 {
   text-align: center;
   text-shadow: 0 0 10px #09acd5, 0 0 20px #09acd5, 0 0 30px #c3b0a2;
 }
-.github-link:hover {
-  color: yellow;
+.github-link:hover,
+.linkedin:hover {
+  color: black;
+  box-shadow: 0 0 15px rgba(215, 202, 200, 0.8);
+}
+a {
   text-decoration: none;
-  text-align: center;
 }

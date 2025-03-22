@@ -1,12 +1,23 @@
 export function SideBar() {
   return (
-    <aside className="sidebar">
-      <h3>Recipes</h3>
-      <ul>
-        <li>Filter</li>
-        <li>Calories</li>
-        <li>Favorites</li>
-      </ul>
+    <aside>
+      {/* <ul className="sidebar">
+        <li className="DashBoard">
+          <Link to="/dashboard">📊 Dash Board</Link>
+        </li>
+        <li className="profile">
+          <Link to="/profile"> 👤Profile</Link>
+        </li>
+        <li className="filter">
+          <Link to="/filter"> 🔽 Filter</Link>
+        </li>
+        <li className="settings">
+          <Link to="/settings"> ⚙️Settings</Link>
+        </li>
+        <li className="theme">
+          <Link to="/theme">🎨 Theme</Link>
+        </li>
+      </ul> */}
     </aside>
   );
 }

@@ -8,7 +8,7 @@ export function FooterPage() {
         className="github-link"
         href="https://github.com/kainat-1/BiteBook"
         target="_blank">
-        GitHub
+        👨🏻‍💻 GitHub
       </a>
       </p>
     </footer>
