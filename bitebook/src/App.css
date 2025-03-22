@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  background-color: rgb(62, 48, 48);
+  background-color: rgb(37, 164, 171);
   font-family: Arial, sans-serif;
 }
 
 .logo {
   width: 150px;
   text-align: center;
-  border: 2px black solid;
+  border: 2px rgb(4, 78, 139) solid;
   border-radius: 20px;
   padding: 10px;
 }
@@ -26,7 +26,7 @@ ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(4, 78, 139);
   padding: 10px 0;
   border-radius: 5px;
 }
@@ -46,8 +46,8 @@ ul {
 }
 
 .navbar a:hover {
-  background-color: #555;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: rgb(4, 78, 139);
+  box-shadow: 0 0 10px rgb(4, 78, 139);
 }
 
 .fav,
@@ -79,9 +79,10 @@ h1 {
 
 .footer-text {
   text-align: center;
-  text-shadow: 0 0 10px #c3b0a2, 0 0 20px #c3b0a2, 0 0 30px #c3b0a2;
+  text-shadow: 0 0 10px #09acd5, 0 0 20px #09acd5, 0 0 30px #c3b0a2;
 }
-
-.github-link {
+.github-link:hover {
+  color: yellow;
+  text-decoration: none;
   text-align: center;
 }
