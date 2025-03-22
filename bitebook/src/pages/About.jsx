@@ -17,21 +17,21 @@ function About() {
         <h4>Developers</h4>
         <ul>
           <li>
-            Richard Nixon
-            <a
+            Richard Nixon 
+            <a className="linkedin"
               href="https://www.linkedin.com/in/richardnixondev/"
               target="blank"
             >
-              linkedin
+             🔵 Linkedin
             </a>
           </li>
           <li>
-            Kainat Naseer
-            <a
+            Kainat Naseer 
+            <a className="linkedin"
               href="https://www.linkedin.com/in/kainat-naseer-523845285//"
               target="blank"
             >
-              linkedin
+              🔵 Linkedin
             </a>
           </li>
         </ul>

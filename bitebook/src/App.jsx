@@ -12,7 +12,7 @@ import Recipes from "./pages/Recipes";
 import RecipeDetails from "./pages/RecipeDetails";
 import NotFound from "./pages/notfound";
 import EditRecipe from "./pages/EditRecipe";
-
+import { DashBoard } from "./pages/DashBoard";
 
 function App() {
   const [recipes, setRecipes] = useState(recipesData);
@@ -34,8 +34,16 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/edit/:id" element={<EditRecipe />} />
             <Route path="/about" element={<About />} />
-            <Route path="/recipes" element={<Recipes recipes={recipes} onDelete={deleteRecipe} />} />
+            <Route
+              path="/recipes"
+              element={<Recipes recipes={recipes} onDelete={deleteRecipe} />}
+            />
             <Route path="/recipe/:recipeID" element={<RecipeDetails />} />
+            {/* <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/profile" element={<Profile/>} />
+            <Route path="/filter" element={<Filter />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/theme" element={<Theme />} /> */}
           </Routes>
         </div>
       </div>
