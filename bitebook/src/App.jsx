@@ -35,7 +35,7 @@ function App() {
             <Route path="/edit/:id" element={<EditRecipe />} />
             <Route path="/about" element={<About />} />
             <Route path="/recipes" element={<Recipes recipes={recipes} onDelete={deleteRecipe} />} />
-            <Route path="/recipe/:id" element={<RecipeDetails />} />
+            <Route path="/recipe/:recipeID" element={<RecipeDetails />} />
           </Routes>
         </div>
       </div>
