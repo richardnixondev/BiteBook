@@ -10,9 +10,9 @@ export function NavBar() {
         <li className="recipes">
           <Link to="/recipes">📖 Recipes</Link>
         </li>
-        <li className="fav">
+        {/* <li className="fav">
           <Link to="/favorites">❤️ Favorites</Link>
-        </li>
+        </li> */}
         <li className="about">
           <Link to="/about">ℹ️ About</Link>
         </li>

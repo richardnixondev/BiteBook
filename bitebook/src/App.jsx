@@ -13,6 +13,11 @@ import RecipeDetails from "./pages/RecipeDetails";
 import NotFound from "./pages/notfound";
 import EditRecipe from "./pages/EditRecipe";
 import { DashBoard } from "./pages/DashBoard";
+import { Profile } from "./pages/Profile";
+import { Filter } from "./pages/Filter";
+import { Settings } from "./pages/Settings";
+import { Theme } from "./pages/Theme";
+// import React, { useState, useEffect } from "react";
 
 function App() {
   const [recipes, setRecipes] = useState(recipesData);
@@ -39,11 +44,11 @@ function App() {
               element={<Recipes recipes={recipes} onDelete={deleteRecipe} />}
             />
             <Route path="/recipe/:recipeID" element={<RecipeDetails />} />
-            {/* <Route path="/dashboard" element={<DashBoard />} />
-            <Route path="/profile" element={<Profile/>} />
-            <Route path="/filter" element={<Filter />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/theme" element={<Theme />} /> */}
+            <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/profile" element={<Profile />} />
+            {/* <Route path="/filter" element={<Filter />} /> */}
+            {/* <Route path="/settings" element={<Settings />} /> */}
+            <Route path="/theme" element={<Theme />} />
           </Routes>
         </div>
       </div>
@@ -51,5 +56,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

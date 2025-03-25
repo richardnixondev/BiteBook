@@ -1,7 +1,12 @@
+
 body {
   margin: 0;
   background-color: rgb(37, 164, 171);
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Dancing Script', cursive;
+
 }
 
 .logo {
@@ -65,13 +70,24 @@ ul {
 .fav:hover,
 .home:hover,
 .recipes:hover,
-.about:hover {
+.about:hover,
+.DashBoard:hover,
+.profile:hover,
+.theme:hover {
   box-shadow: 0 0 15px rgba(215, 202, 200, 0.8);
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: white;
+  width: 150px;
+  font-style: italic;
+
 }
 
 h1 {

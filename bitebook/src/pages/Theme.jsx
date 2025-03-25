@@ -1,3 +1,7 @@
-export function Theme() {
-  return <p>Theme</p>;
+export function Theme(){
+  return(
+    <p>Theme</p>
+    
+  )
 }
+
