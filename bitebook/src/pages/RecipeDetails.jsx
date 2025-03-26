@@ -22,6 +22,8 @@ const RecipeDetails = () => {
           </li>
         )
       })}</p>}
+      <h1>Instructions</h1>
+      <p>{recipe.strInstructions}</p>
 
     </div>
   );
