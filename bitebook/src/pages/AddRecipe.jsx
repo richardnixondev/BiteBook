@@ -10,27 +10,27 @@ const AddRecipe = ({ onAdd }) => {
     strInstructions: "",
   });
 
-  // Atualiza o estado conforme o usuário digita
+// Update state as the user types
   const handleChange = (e) => {
     setRecipe({ ...recipe, [e.target.name]: e.target.value });
   };
 
-  // Função para salvar a receita
+// Function to save the recipe
   const handleSubmit = (e) => {
-    e.preventDefault(); // Evita o recarregamento da página
+    e.preventDefault(); // Prevent page reload
 
-    // Criando um ID único para a nova receita
+ // Create a unique ID for the new recipe
     const newRecipe = {
       ...recipe,
       id: crypto.randomUUID(),
       calories: Number(recipe.calories),
       servings: Number(recipe.servings),
-      ingredients: recipe.ingredients.split(","), // Transforma a string em array
+      ingredients: recipe.ingredients.split(","),
     };
 
-    onAdd(newRecipe); // Adiciona a receita no estado e Local Storage
+    onAdd(newRecipe);// Add the recipe to state and Local Storage
 
-    // Resetar o formulário após salvar
+// Reset the form after saving
     setRecipe({
       name: "",
       calories: "",
@@ -43,12 +43,12 @@ const AddRecipe = ({ onAdd }) => {
 
   return (
     <div>
-      <h1>Adicionar Nova Receita</h1>
+      <h1>Add New Recipe</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
-          placeholder="Nome da Receita"
+          placeholder="Recipe's Name"
           value={recipe.name}
           onChange={handleChange}
           required
@@ -56,7 +56,7 @@ const AddRecipe = ({ onAdd }) => {
         <input
           type="number"
           name="calories"
-          placeholder="Calorias"
+          placeholder="Calories"
           value={recipe.calories}
           onChange={handleChange}
           required
@@ -64,7 +64,7 @@ const AddRecipe = ({ onAdd }) => {
         <input
           type="text"
           name="image"
-          placeholder="URL da Imagem"
+          placeholder="Imagem's Recipe"
           value={recipe.image}
           onChange={handleChange}
           required
@@ -72,7 +72,7 @@ const AddRecipe = ({ onAdd }) => {
         <input
           type="number"
           name="servings"
-          placeholder="Porções"
+          placeholder="Servings"
           value={recipe.servings}
           onChange={handleChange}
           required
@@ -80,19 +80,19 @@ const AddRecipe = ({ onAdd }) => {
         <input
           type="text"
           name="ingredients"
-          placeholder="Ingredientes (separados por vírgula)"
+          placeholder="Ingredients (separated by comma)"
           value={recipe.ingredients}
           onChange={handleChange}
           required
         />
         <textarea
           name="strInstructions"
-          placeholder="Instruções"
+          placeholder="Instructions"
           value={recipe.strInstructions}
           onChange={handleChange}
           required
         />
-        <button type="submit">Adicionar Receita</button>
+        <button type="submit">Add Recipe</button>
       </form>
     </div>
   );

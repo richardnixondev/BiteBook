@@ -6,7 +6,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
   const navigate = useNavigate();
   const [recipe, setRecipe] = useState(null);
 
-  // Carrega a receita correta ao iniciar
+  // load recipes
   useEffect(() => {
     const storedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
     const foundRecipe = storedRecipes.find((r) => r.id === id);
@@ -22,12 +22,12 @@ const EditRecipe = ({ recipes, setRecipes }) => {
     return <h1>Receita não encontrada!</h1>;
   }
 
-  // Atualiza os valores conforme o usuário edita
+  // Update values as user choices
   const handleChange = (e) => {
     setRecipe({ ...recipe, [e.target.name]: e.target.value });
   };
 
-  // Salva as alterações e atualiza no Local Storage
+  // Save chances and store at local storage
   const handleSave = () => {
     const updatedRecipes = recipes.map((r) => (r.id === id ? recipe : r));
     setRecipes(updatedRecipes);
@@ -47,7 +47,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onChange={handleChange}
       />
 
-      <label>Calorias:</label>
+      <label>calories:</label>
       <input
         type="number"
         name="calories"
@@ -55,7 +55,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onChange={handleChange}
       />
 
-      <label>Imagem (URL):</label>
+      <label>Image (URL):</label>
       <input
         type="text"
         name="image"
@@ -63,7 +63,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onChange={handleChange}
       />
 
-      <label>Porções:</label>
+      <label>Servings:</label>
       <input
         type="number"
         name="servings"
@@ -71,7 +71,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onChange={handleChange}
       />
 
-      <label>Ingredientes (separados por vírgula):</label>
+      <label>ingredients (separate by comma):</label>
       <input
         type="text"
         name="ingredients"
@@ -79,7 +79,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onChange={(e) => setRecipe({ ...recipe, ingredients: e.target.value.split(",") })}
       />
 
-      <label>Instruções:</label>
+      <label>Instructions:</label>
       <textarea
         name="strInstructions"
         value={recipe.strInstructions}
@@ -90,7 +90,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         onClick={handleSave}
         style={{ marginTop: "10px", padding: "5px", backgroundColor: "green", color: "white" }}
       >
-        💾 SALVAR
+        💾 SAVE
       </button>
     </div>
   );

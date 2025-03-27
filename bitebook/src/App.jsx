@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Recipes from "./pages/Recipes";
 import RecipeDetails from "./pages/RecipeDetails";
-import NotFound from "./pages/notfound";
+import NotFound from "./pages/NotFound";
 import EditRecipe from "./pages/EditRecipe";
 import { DashBoard } from "./pages/DashBoard";
 import { Profile } from "./pages/Profile";
@@ -22,25 +22,25 @@ import AddRecipe from "./pages/AddRecipe";
 function App() {
   const [recipes, setRecipes] = useState([]);
 
-  // Carrega receitas do Local Storage ao iniciar
-  useEffect(() => {
-    const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
-    if (storedRecipes) {
-      setRecipes(storedRecipes);
-    } else {
-      localStorage.setItem("recipes", JSON.stringify(recipesData));
-      setRecipes(recipesData);
-    }
-  }, []);
+// Load recipes from Local Storage on startup
+useEffect(() => {
+  const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
+  if (storedRecipes) {
+    setRecipes(storedRecipes);
+  } else {
+    localStorage.setItem("recipes", JSON.stringify(recipesData));
+    setRecipes(recipesData);
+  }
+}, []);
 
-  // Adiciona uma nova receita e salva no Local Storage
+// Add a new recipe and save it to Local Storage
   const addRecipe = (newRecipe) => {
     const updatedRecipes = [...recipes, newRecipe];
     setRecipes(updatedRecipes);
     localStorage.setItem("recipes", JSON.stringify(updatedRecipes));
   };
 
-  // Excluir receita e atualizar Local Storage
+// Delete a recipe and update Local Storage
   const deleteRecipe = (id) => {
     const updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
     setRecipes(updatedRecipes);
