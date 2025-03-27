@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function RecipeCard({ recipe, onDelete }) {
   if (!recipe) {
-    return <p>Erro: No recipes here.</p>;
+    return <p>Error: No recipes here.</p>;
   }
 
   return (
@@ -15,13 +15,13 @@ function RecipeCard({ recipe, onDelete }) {
 
       <Link to={`/recipe/${recipe.id}`} style={{ textDecoration: "none" }}>
         <button style={{ marginRight: "10px", padding: "5px" }}>
-          🔍 Ver Detalhes
+          🔍 See Details
         </button>
       </Link>
 
       <Link to={`/edit/${recipe.id}`} style={{ textDecoration: "none" }}>
         <button style={{ marginRight: "10px", padding: "5px", backgroundColor: "blue", color: "white" }}>
-          ✏️ Editar
+          ✏️ Edit
         </button>
       </Link>
 
@@ -29,7 +29,7 @@ function RecipeCard({ recipe, onDelete }) {
         onClick={() => onDelete(recipe.id)} 
         style={{ backgroundColor: "red", color: "white", padding: "5px", cursor: "pointer" }}
       >
-        🗑️ Deletar
+        🗑️ Delete
       </button>
     </div>
   );

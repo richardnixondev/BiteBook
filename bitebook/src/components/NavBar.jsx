@@ -13,6 +13,9 @@ export function NavBar() {
         {/* <li className="fav">
           <Link to="/favorites">❤️ Favorites</Link>
         </li> */}
+        <li className="addrecipe">
+          <Link to="/addrecipe">🍰 Add Recipe</Link>
+        </li>
         <li className="about">
           <Link to="/about">ℹ️ About</Link>
         </li>
