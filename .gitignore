@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# Vite build output
+/dist/
+
+# Vite cache
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE or Editor directories
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Other potential files you might want to ignore
+*.log
+*.lock
