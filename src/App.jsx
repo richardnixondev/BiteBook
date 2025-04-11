@@ -14,10 +14,9 @@ import NotFound from "./pages/NotFound";
 import EditRecipe from "./pages/EditRecipe";
 import { DashBoard } from "./pages/DashBoard";
 import { Profile } from "./pages/Profile";
-import { Filter } from "./pages/Filter";
-import { Settings } from "./pages/Settings";
 import { Theme } from "./pages/Theme";
 import AddRecipe from "./pages/AddRecipe";
+import { Favorites } from "./components/Favorites";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -71,6 +70,7 @@ useEffect(() => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/addrecipe" element={<AddRecipe onAdd={addRecipe} />} />
             <Route path="/theme" element={<Theme />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </div>
       </div>

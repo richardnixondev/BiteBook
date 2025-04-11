@@ -9,11 +9,13 @@ export function DashBoard() {
     // Load recipes from Local Storage
     const storedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
     setRecipes(storedRecipes);
-
-    // Filter favorite recipes (assuming there is an 'isFavorite' property to mark favorites)
-    const favorites = storedRecipes.filter((recipe) => recipe.isFavorite);
+  
+    // Load favorite recipes using IDs stored in 'favorites'
+    const favoriteIds = JSON.parse(localStorage.getItem("favorites")) || [];
+    const favorites = storedRecipes.filter((recipe) => favoriteIds.includes(recipe.id));
     setFavoriteRecipes(favorites);
   }, []);
+  
 
   const totalCalories = recipes.reduce((total, recipe) => total + recipe.calories, 0);
 
