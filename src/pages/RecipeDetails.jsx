@@ -7,23 +7,43 @@ const RecipeDetails = ({ recipes }) => {
   const recipe = recipes.find((r) => r.id === recipeID);
 
   if (!recipe) {
-    return <h2>Recipe not found!</h2>;
+    return <h2 className="text-center text-xl text-red-500">Recipe not found!</h2>;
   }
 
   return (
-    <div>
-      <h1>{recipe.name}</h1>
-      <img src={recipe.image} alt={recipe.name} width="200" />
-      <p><strong>Calories:</strong> {recipe.calories} kcal</p>
-      <p><strong>servings:</strong> {recipe.servings}</p>
-      <h3>Ingredients:</h3>
-      <ul>
-        {recipe.ingredients.map((ing, index) => (
-          <li key={index}>{ing}</li>
-        ))}
-      </ul>
-      <h3>Ingredients:</h3>
-      <p>{recipe.strInstructions}</p>
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">{recipe.name}</h1>
+      
+      <div className="flex justify-center mb-6">
+        <img
+          src={recipe.image}
+          alt={recipe.name}
+          className="w-full sm:w-96 h-auto rounded-lg shadow-lg"
+        />
+      </div>
+
+      <div className="mb-6">
+        <p className="text-lg text-gray-700">
+          <strong className="font-semibold">Calories:</strong> {recipe.calories} kcal
+        </p>
+        <p className="text-lg text-gray-700">
+          <strong className="font-semibold">Servings:</strong> {recipe.servings}
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h3 className="text-2xl font-semibold text-gray-800">Ingredients:</h3>
+        <ul className="list-inside list-disc text-gray-700">
+          {recipe.ingredients.map((ing, index) => (
+            <li key={index} className="text-lg">{ing}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mb-6">
+        <h3 className="text-2xl font-semibold text-gray-800">Instructions:</h3>
+        <p className="text-lg text-gray-700">{recipe.strInstructions}</p>
+      </div>
     </div>
   );
 };
