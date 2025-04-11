@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 const RecipeDetails = ({ recipes }) => {
   const { recipeID } = useParams();
 
-  // Encontra a receita pelo ID
+  // Find recipe using ID
   const recipe = recipes.find((r) => r.id === recipeID);
 
   if (!recipe) {
