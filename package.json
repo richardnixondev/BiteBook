@@ -10,6 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+     "engines": {
+     "node": "20.x",
+     "npm": "10.x"
+},
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "@headlessui/react": "^2.2.1",
