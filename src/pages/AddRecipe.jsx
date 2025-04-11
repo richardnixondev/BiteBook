@@ -1,5 +1,31 @@
 import { useState } from "react";
+import * as Headless from '@headlessui/react'
 
+const Label = ({ children }) => {
+  return (
+    <label className="block text-sm font-medium text-gray-700">
+      {children}
+    </label>
+  );
+};
+
+const Input = ({ ...props }) => {
+  return (
+    <input
+      {...props}
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+    />
+  );
+};
+
+const Textarea = ({ ...props }) => {
+  return (
+    <textarea
+      {...props}
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+    />
+  );
+};
 
 const AddRecipe = ({ onAdd }) => {
   const [recipe, setRecipe] = useState({
@@ -50,11 +76,12 @@ const AddRecipe = ({ onAdd }) => {
   };
 
   return (
-    <div className="add-recipe-container">
-      <h1>Add New Recipe</h1>
-      <form className="add-recipe-form" onSubmit={handleSubmit}>
-        <div className="form-fields">
-          <input
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-semibold text-center mb-6">Add New Recipe</h1>
+      <form onSubmit={handleSubmit}>
+        <Headless.Field className="mb-4">
+          <Label>Recipe Name</Label>
+          <Input
             type="text"
             name="name"
             placeholder="Recipe's Name"
@@ -62,7 +89,11 @@ const AddRecipe = ({ onAdd }) => {
             onChange={handleChange}
             required
           />
-          <input
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Calories</Label>
+          <Input
             type="number"
             name="calories"
             placeholder="Calories"
@@ -70,22 +101,32 @@ const AddRecipe = ({ onAdd }) => {
             onChange={handleChange}
             required
           />
-          <input
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Image URL (optional)</Label>
+          <Input
             type="text"
             name="image"
             placeholder="Image URL (optional)"
             value={recipe.image}
             onChange={handleChange}
           />
-          <div className="upload-section">
-            <label>Or upload a local image:</label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageUpload}
-            />
-          </div>
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Or Upload a Local Image</Label>
           <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Servings</Label>
+          <Input
             type="number"
             name="servings"
             placeholder="Servings"
@@ -93,34 +134,49 @@ const AddRecipe = ({ onAdd }) => {
             onChange={handleChange}
             required
           />
-          <input
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Ingredients (separated by comma)</Label>
+          <Input
             type="text"
             name="ingredients"
-            placeholder="Ingredients (separated by comma)"
+            placeholder="Ingredients"
             value={recipe.ingredients}
             onChange={handleChange}
             required
           />
-          <textarea
+        </Headless.Field>
+
+        <Headless.Field className="mb-4">
+          <Label>Instructions</Label>
+          <Textarea rows="10" cols="70"
             name="strInstructions"
             placeholder="Instructions"
             value={recipe.strInstructions}
             onChange={handleChange}
             required
           />
-          <button type="submit">Add Recipe</button>
-        </div>
+        </Headless.Field>
 
-        {recipe.image && (
-          <div className="image-preview">
-            <h4>Preview</h4>
-            <img
-              src={recipe.image}
-              alt="Recipe Preview"
-            />
-          </div>
-        )}
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
+        >
+          Add Recipe
+        </button>
       </form>
+
+      {recipe.image && (
+        <div className="mt-6 text-center">
+          <h4 className="font-semibold mb-2">Image Preview</h4>
+          <img
+            src={recipe.image}
+            alt="Recipe Preview"
+            className="rounded-md shadow-md"
+          />
+        </div>
+      )}
     </div>
   );
 };

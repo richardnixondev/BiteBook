@@ -1,206 +1,37 @@
 
+@import "tailwindcss";
+
+/* Body Styling */
 body {
   margin: 0;
-  background-color: rgb(37, 164, 171);
-  /* font-family: Arial, sans-serif; */
-  font-family: 'Poppins', sans-serif;
-  /* font-family: 'Great Vibes', cursive; */
-  /*font-family: 'Dancing Script', cursive;*/
-
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
-.logo {
-  width: 150px;
-  text-align: center;
-  border: 2px rgb(4, 78, 139) solid;
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.logo-div {
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* Navbar Styling */
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(4, 78, 139);
-  padding: 10px 0;
-  border-radius: 5px;
-}
-
-.navbar li {
-  display: inline-block;
+  @apply flex justify-evenly items-center bg-blue-600 py-2 rounded-lg;
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  @apply text-white text-lg font-semibold px-4 py-2 rounded-md transition-all duration-300 ease-in-out;
 }
 
 .navbar a:hover {
-  background-color: rgb(4, 78, 139);
-  box-shadow: 0 0 10px rgb(4, 78, 139);
+  @apply bg-blue-700 text-gray-200;
 }
 
-.fav,
-.home,
-.recipes,
-.about {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.fav:hover,
-.home:hover,
-.recipes:hover,
-.about:hover,
-.DashBoard:hover,
-.profile:hover,
-.theme:hover {
-  box-shadow: 0 0 15px rgba(215, 202, 200, 0.8);
-}
-
+/* Sidebar Styling */
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
-  margin-left: 30px;
-  color: white;
-  width: 150px;
-  font-style: italic;
-
+  @apply bg-blue-600 text-white p-6 w-48 flex flex-col space-y-6;
 }
 
-h1 {
-  text-align: center;
+.sidebar a {
+  @apply text-xl font-semibold hover:text-gray-200;
 }
 
 .footer-text {
   text-align: center;
   text-shadow: 0 0 10px #09acd5, 0 0 20px #09acd5, 0 0 30px #c3b0a2;
-}
-.github-link:hover,
-.linkedin:hover {
-  color: black;
-  box-shadow: 0 0 15px rgba(215, 202, 200, 0.8);
-}
-a {
-  text-decoration: none;
-}
-
-
-.add-recipe-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.add-recipe-form {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.form-fields {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-fields input,
-.form-fields textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-button[type="submit"] {
-  padding: 10px;
-  background-color: green;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.upload-section {
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-.image-preview {
-  flex: 0 0 160px;
-  text-align: center;
-}
-
-.image-preview img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  margin-top: 5px;
-}
-
-
-.about-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.developers {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.developer-card {
-  text-align: center;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.linkedin {
-  text-decoration: none;
-  color: #0a66c2;
-  font-weight: bold;
 }

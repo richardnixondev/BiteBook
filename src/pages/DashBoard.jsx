@@ -95,9 +95,9 @@ export function DashBoard() {
 
       <div>
         <Link to="/addrecipe">
-          <button style={{ padding: "10px", backgroundColor: "green", color: "white" }}>
-            Adicionar Nova Receita
-          </button>
+        <button className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
+        > Add Recipe
+        </button>
         </Link>
       </div>
     </div>

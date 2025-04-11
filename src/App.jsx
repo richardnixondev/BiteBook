@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { SideBar } from "./components/SideBar";
+//import { NavbarSidebar } from "./components/NavbarSidebar";
 import { HeaderPage } from "./components/HeaderPage";
 import { FooterPage } from "./components/FooterPage";
 import React, { useState, useEffect } from "react";
@@ -50,8 +51,8 @@ useEffect(() => {
     <Router>
       <HeaderPage />
       <div className="header">
-        <NavBar />
-        <SideBar />
+      <NavBar />
+      <SideBar />
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
