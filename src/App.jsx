@@ -14,8 +14,6 @@ import NotFound from "./pages/NotFound";
 import EditRecipe from "./pages/EditRecipe";
 import { DashBoard } from "./pages/DashBoard";
 import { Profile } from "./pages/Profile";
-import { Filter } from "./pages/Filter";
-import { Settings } from "./pages/Settings";
 import { Theme } from "./pages/Theme";
 import AddRecipe from "./pages/AddRecipe";
 
